@@ -3,24 +3,20 @@ import "google/protobuf/timestamp.proto";
 
 package UEarthscopeDataselectAmbassadorAPI.V1;
 
-import "uEarthscopeDataselectAmbassadorAPI/v1/stream_identifier.proto";
 import "uEarthscopeDataselectAmbassadorAPI/v1/data_type.proto";
 
 /**
- * Defines a data packet.  This amounts to a stream identifier, a start time,
- * sampling rate, and data.
+ * Defines a packet of seismic data.
  */
 message Packet {
-  // The stream identifier.
-  StreamIdentifier stream_identifier = 1;
   // The packet's start time (UTC).
-  google.protobuf.Timestamp start_time = 2;
+  google.protobuf.Timestamp start_time = 1;
   // The packet's sampling rate in Hz.
-  double sampling_rate = 3;
+  double sampling_rate = 2;
   // The data type.
-  DataType data_type = 4;
+  DataType data_type = 3;
   // The number of samples in the packet.
-  uint32 number_of_samples = 5;
+  uint32 number_of_samples = 4;
   // The data in the packet.  This is always stored in little endian.
-  bytes data = 6;
+  bytes data = 5;
 }

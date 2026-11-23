@@ -1,8 +1,8 @@
 edition = "2023";
 
-package UDataPacketCacheServiceAPI.V1;
+package UEarthscopeDataselectAmbassadorAPI.V1;
 
-import "uDataPacketCacheServiceAPI/v1/stream_request.proto";
+import "uEarthscopeDataselectAmbassadorAPI/v1/stream_request.proto";
 
 /**
  * Requests data for the following streams.

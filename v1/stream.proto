@@ -1,9 +1,9 @@
 edition = "2023";
 
-package UDataPacketCacheServiceAPI.V1;
+package UEarthscopeDataselectAmbassadorAPI.V1;
 
-import "uDataPacketCacheServiceAPI/v1/stream_identifier.proto";
-import "uDataPacketCacheServiceAPI/v1/packet.proto";
+import "uEarthscopeDataselectAmbassadorAPI/v1/stream_identifier.proto";
+import "uEarthscopeDataselectAmbassadorAPI/v1/packet.proto";
 
 /**
  * A stream is a collection of packets corresponding to the stream

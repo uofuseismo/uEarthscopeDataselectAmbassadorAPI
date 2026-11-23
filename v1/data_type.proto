@@ -11,9 +11,9 @@ enum DataType {
   /// The data should be interpreted as 32-bit integers.
   DATA_TYPE_INTEGER_32 = 1;
   /// The data should be interpreted as 32-bit float values.
-  DATA_TYPE_FLOAT = 2;
+  DATA_TYPE_FLOAT_32 = 2;
   /// The data should be interpreted as 64-bit float values.
-  DATA_TYPE_DOUBLE = 3;
-  /// The data should b interpreted as character data.  This is unusual.
+  DATA_TYPE_FLOAT_64 = 3;
+  /// The data should be interpreted as character data.  This is unusual.
   DATA_TYPE_TEXT = 4;
 }

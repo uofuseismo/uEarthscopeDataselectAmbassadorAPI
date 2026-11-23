@@ -1,9 +1,9 @@
 edition = "2023";
 import "google/protobuf/timestamp.proto";
 
-package UDataPacketCacheServiceAPI.V1;
+package UEarthscopeDataselectAmbassadorAPI.V1;
 
-import "uDataPacketCacheServiceAPI/v1/stream_identifier.proto";
+import "uEarthscopeDataselectAmbassadorAPI/v1/stream_identifier.proto";
 
 /**
  * Requests data for the following streams.

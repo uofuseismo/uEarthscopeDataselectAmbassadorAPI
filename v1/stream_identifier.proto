@@ -7,8 +7,13 @@ package UEarthscopeDataselectAmbassadorAPI.V1;
  * station name, channel code, and location code.
  */
 message StreamIdentifier {
-  string network = 1; /// The network code - e.g., UU.
-  string station = 2; /// The station code - e.g., FORK.
-  string channel = 3; /// The channel code - e.g., HHZ.
-  string location_code = 4 [default = "--"]; /// The location code - e.g., 01.
+  /// The network code - e.g., UU.
+  string network = 1;
+  /// The station code - e.g., FORK.
+  string station = 2;
+  /// The channel code - e.g., HHZ.
+  string channel = 3; 
+  /// The location code - e.g., 01.  This can also be "" or "  " though,
+  /// in this case, it will be changed to "--".
+  string location_code = 4 [default = "--"];
 }

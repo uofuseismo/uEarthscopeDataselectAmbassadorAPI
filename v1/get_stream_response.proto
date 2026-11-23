@@ -1,0 +1,41 @@
+edition = "2023";
+
+package UEarthscopeDataselectAmbassadorAPI.V1;
+
+import "uEarthscopeDataselectAmbassadorAPI/v1/stream.proto";
+
+
+/**
+ * The response to a stream request. 
+ *
+ * Note, if the stream's data exceeds the gRPC message limit (nominally 4 MB)
+ * then this message may be a continuation.  In this case, a stream will
+ * be a consecutive sequence of GetStreamResponse messages with a
+ * RETURN_CODE_SUCCESS status.  Moreover, the data will be sorted in
+ * temporally increasing order.
+ */
+message GetStreamResponse {
+  // Contextualizes the return code for the stream request.
+  enum ReturnCode {
+     /// The return code is unspecified.  This is not a valid response.
+     RETURN_CODE_UNSPECIFIED = 0;
+     /// The query for this stream was successful.
+     RETURN_CODE_SUCCESS = 1;
+     /// The request was valid but there was no data.
+     RETURN_CODE_NO_DATA_FOUND = 2;
+     /// The provided time range was invalid - likely the end time is less
+     /// than or equal to the start time.
+     RETURN_CODE_INVALID_TIME_RANGE = 3;
+     /// The provided stream identifier was invalid.
+     RETURN_CODE_INVALID_STREAM_IDENTIFIER = 4; 
+  }
+  // The desired stream.  This will at least have a stream_identifier()
+  // defined so as to identify streams that return no data.
+  Stream stream = 1;
+  // The return code.
+  ReturnCode return_code = 2;
+  // True indicates that there will be a subsequent continuation message for
+  // this stream and the client should merge the next message into this stream.
+  bool expect_continuation = 3;
+}
+
