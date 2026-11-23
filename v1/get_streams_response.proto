@@ -14,7 +14,7 @@ import "uEarthscopeDataselectAmbassadorAPI/v1/stream.proto";
  * RETURN_CODE_SUCCESS status.  Moreover, the data will be sorted in
  * temporally increasing order.
  */
-message GetStreamResponse {
+message GetStreamsResponse {
   // Contextualizes the return code for the stream request.
   enum ReturnCode {
      /// The return code is unspecified.  This is not a valid response.

@@ -3,9 +3,9 @@ edition = "2023";
 package UEarthscopeDataselectAmbassadorAPI.V1;
 
 import "uEarthscopeDataselectAmbassadorAPI/v1/get_streams_request.proto";
-import "uEarthscopeDataselectAmbassadorAPI/v1/get_stream_response.proto";
+import "uEarthscopeDataselectAmbassadorAPI/v1/get_streams_response.proto";
 
 service DataService {
    // Gets the data for the specified streams.
-   rpc GetStreams(GetStreamsRequest) returns(stream GetStreamResponse) {};
+   rpc GetStreams(GetStreamsRequest) returns(stream GetStreamsResponse) {};
 }
