@@ -1,0 +1,19 @@
+edition = "2023";
+
+package UEarthscopeDataselectAmbassadorAPI.V1;
+
+/**
+ * Defines the underlying data type when unpacking data.
+ */
+enum DataType {
+  /// The data type is undefined.  This is not a valid code.
+  DATA_TYPE_UNSPECIFIED = 0;
+  /// The data should be interpreted as 32-bit integers.
+  DATA_TYPE_INTEGER_32 = 1;
+  /// The data should be interpreted as 32-bit float values.
+  DATA_TYPE_FLOAT = 2;
+  /// The data should be interpreted as 64-bit float values.
+  DATA_TYPE_DOUBLE = 3;
+  /// The data should b interpreted as character data.  This is unusual.
+  DATA_TYPE_TEXT = 4;
+}

@@ -1,0 +1,18 @@
+edition = "2023";
+
+package UDataPacketCacheServiceAPI.V1;
+
+import "uDataPacketCacheServiceAPI/v1/stream_identifier.proto";
+import "uDataPacketCacheServiceAPI/v1/packet.proto";
+
+/**
+ * A stream is a collection of packets corresponding to the stream
+ * identifier.
+ */
+message Stream {
+   /// The stream identifier.
+   StreamIdentifier stream_identifier = 1;
+   /// The packets comprising the time series.  These are sorted by
+   /// (increasing) start time.
+   repeated Packet packets = 2;
+}

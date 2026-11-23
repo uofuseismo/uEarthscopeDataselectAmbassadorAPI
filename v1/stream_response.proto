@@ -1,0 +1,17 @@
+edition = "2023";
+import "google/protobuf/timestamp.proto";
+
+package UDataPacketCacheServiceAPI.V1;
+
+import "uDataPacketCacheServiceAPI/v1/stream.proto";
+
+/**
+ * The response for a stream request.
+ */
+message StreamResponse {
+  // The desired stream's identifier.  This does not be defined so use
+  // something like has_stream() prior to accessing.
+  Stream stream = 1;
+  // The return code for this stream.
+  ReturnCode return_code = 2;
+}

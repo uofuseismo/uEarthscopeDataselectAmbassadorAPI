@@ -1,0 +1,13 @@
+edition = "2023";
+
+package UDataPacketCacheServiceAPI.V1;
+
+import "uDataPacketCacheServiceAPI/v1/stream_request.proto";
+
+/**
+ * Requests data for the following streams.
+ */
+message GetStreamsRequest {
+  // The streams to request.
+  repeated StreamRequest requests = 1;
+}
