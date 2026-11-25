@@ -5,7 +5,8 @@ package UEarthscopeDataselectAmbassadorAPI.V1;
 import "uEarthscopeDataselectAmbassadorAPI/v1/stream_request.proto";
 
 /**
- * Requests data for the following streams.
+ * Requests data for the following streams.  
+ * A request identifier can be passed via the x-request-id header field.
  */
 message GetStreamsRequest {
   // The streams to request.
